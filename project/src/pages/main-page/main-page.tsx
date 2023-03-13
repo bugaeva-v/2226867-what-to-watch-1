@@ -1,6 +1,14 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import MovieCard from '../../components/movie-card/movie-card';
+import {PropsWithChildren} from 'react';
 
-function MainPage(): JSX.Element {
+type MainePageProps = PropsWithChildren<{
+  title: string;
+  genre: string;
+  year: number;
+}>
+
+function MainPage({title, genre, year}: MainePageProps): JSX.Element {
   return (
     <div className='container'>
       <section className='film-card'>
@@ -38,10 +46,10 @@ function MainPage(): JSX.Element {
             </div>
 
             <div className='film-card__desc'>
-              <h2 className='film-card__title'>The Grand Budapest Hotel</h2>
+              <h2 className='film-card__title'>{title}</h2>
               <p className='film-card__meta'>
-                <span className='film-card__genre'>Drama</span>
-                <span className='film-card__year'>2014</span>
+                <span className='film-card__genre'>{genre}</span>
+                <span className='film-card__year'>{year}</span>
               </p>
 
               <div className='film-card__buttons'>
@@ -146,4 +154,4 @@ function MainPage(): JSX.Element {
   );
 }
 
-export default {MainPage};
+export default MainPage;
