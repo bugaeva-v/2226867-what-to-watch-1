@@ -35,7 +35,7 @@ const MovieCard = (props: MovieCardType): JSX.Element => {
         }
       </div>
       <h3 className="small-film-card__title">
-        <Link className="small-film-card__link" to={`movies/${props.movie.id}`}>{props.movie.name}</Link>
+        <Link className="small-film-card__link" to={`/movies/${props.movie.id}`}>{props.movie.name}</Link>
       </h3>
     </article>
   );
