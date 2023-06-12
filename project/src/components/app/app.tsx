@@ -7,23 +7,28 @@ import AddReview from '../../pages/add-review/add-review';
 import Player from '../../pages/player/player';
 import NotFound from '../../pages/not-found/not-found';
 import PrivateRoute from '../private-route/private-route';
+import MovieType from '../../types/movie-type';
 
-const App = (): JSX.Element => (
+type AppProps = {
+  movieList: MovieType[];
+};
+
+const App = (props: AppProps): JSX.Element => (
   <BrowserRouter>
     <Routes>
       <Route path="*" element={<NotFound />} />
       <Route path="/">
-        <Route index element={<MainPage />} />
+        <Route index element={<MainPage movieList={props.movieList}/>} />
         <Route path="/login" element={<SignIn />} />
         <Route path="/mylist" element={
-          <PrivateRoute authorizationAccess={false}>
-            <MyList />
+          <PrivateRoute authorizationAccess>
+            <MyList movieList={props.movieList} />
           </PrivateRoute>
         }
         />
-        <Route path="/films/:id" element={<MoviePage />} />
-        <Route path="/films/:id/review" element={<AddReview />} />
-        <Route path="/player/:id" element={<Player />} />
+        <Route path="/movies/:id" element={<MoviePage movieList={props.movieList} />} />
+        <Route path="/movies/:id/review" element={<AddReview movieList={props.movieList} />} />
+        <Route path="/player/:id" element={<Player movieList={props.movieList} />} />
       </Route>
     </Routes>
   </BrowserRouter>
