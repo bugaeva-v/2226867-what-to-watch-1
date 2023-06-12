@@ -8,9 +8,11 @@ import Player from '../../pages/player/player';
 import NotFound from '../../pages/not-found/not-found';
 import PrivateRoute from '../private-route/private-route';
 import MovieType from '../../types/movie-type';
+import ReviewType from '../../types/review-type';
 
 type AppProps = {
   movieList: MovieType[];
+  reviewList: ReviewType[];
 };
 
 const App = (props: AppProps): JSX.Element => (
@@ -26,7 +28,7 @@ const App = (props: AppProps): JSX.Element => (
           </PrivateRoute>
         }
         />
-        <Route path="/movies/:id" element={<MoviePage movieList={props.movieList} />} />
+        <Route path="/movies/:id" element={<MoviePage movieList={props.movieList} reviewList={props.reviewList} />} />
         <Route path="/movies/:id/review" element={<AddReview movieList={props.movieList} />} />
         <Route path="/player/:id" element={<Player movieList={props.movieList} />} />
       </Route>
