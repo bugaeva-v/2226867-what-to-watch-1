@@ -1,9 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import MovieCard from '../../components/movie-card/movie-card';
 import Footer from '../../components/footer/footer';
 import PromoFilm from '../../components/promo-movie/promo-movie';
+import MovieType from '../../types/movie-type';
+import MovieList from '../../components/movie-list/movie-list';
 
-const Main = (): JSX.Element => (
+type MainPageProps = {
+  movieList: MovieType[];
+};
+
+const Main = (props: MainPageProps): JSX.Element => (
   <body>
     <PromoFilm
       name="The Grand Budapest Hotel"
@@ -12,7 +17,6 @@ const Main = (): JSX.Element => (
       genre="Drama"
       date="2014"
     />
-
     <div className="page-content">
       <section className="catalog">
         <h2 className="catalog__title visually-hidden">Catalog</h2>
@@ -51,93 +55,13 @@ const Main = (): JSX.Element => (
         </ul>
 
         <div className="catalog__films-list">
-          <MovieCard
-            img="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
-            title="Fantastic Beasts: The Crimes of Grindelwald"
-          />
-          <MovieCard
-            img="img/bohemian-rhapsody.jpg"
-            title="Bohemian Rhapsody"
-          />
-          <MovieCard
-            img="img/macbeth.jpg"
-            title="Macbeth"
-          />
-          <MovieCard
-            img="img/aviator.jpg"
-            title="Aviator"
-          />
-          <MovieCard
-            img="img/we-need-to-talk-about-kevin.jpg"
-            title="We need to talk about Kevin"
-          />
-          <MovieCard
-            img="img/what-we-do-in-the-shadows.jpg"
-            title="What We Do in the Shadows"
-          />
-          <MovieCard
-            img="img/revenant.jpg"
-            title="Revenant"
-          />
-          <MovieCard
-            img="img/johnny-english.jpg"
-            title="Johnny English"
-          />
-          <MovieCard
-            img="img/shutter-island.jpg"
-            title="Shutter Island"
-          />
-          <MovieCard
-            img="img/pulp-fiction.jpg"
-            title="Pulp Fiction"
-          />
-          <MovieCard
-            img="img/no-country-for-old-men.jpg"
-            title="No Country for Old Men"
-          />
-          <MovieCard
-            img="img/snatch.jpg"
-            title="Snatch"
-          />
-          <MovieCard
-            img="img/moonrise-kingdom.jpg"
-            title="Moonrise Kingdom"
-          />
-          <MovieCard
-            img="img/seven-years-in-tibet.jpg"
-            title="Seven Years in Tibet"
-          />
-          <MovieCard
-            img="img/midnight-special.jpg"
-            title="Midnight Special"
-          />
-          <MovieCard
-            img="img/war-of-the-worlds.jpg"
-            title="War of the Worlds"
-          />
-          <MovieCard
-            img="img/dardjeeling-limited.jpg"
-            title="Dardjeeling Limited"
-          />
-          <MovieCard
-            img="img/orlando.jpg"
-            title="Orlando"
-          />
-          <MovieCard
-            img="img/mindhunter.jpg"
-            title="Mindhunter"
-          />
-          <MovieCard
-            img="img\midnight-special.jpg"
-            title="Midnight Special"
-          />
+          <MovieList movieList={props.movieList}/>
         </div>
 
         <div className="catalog__more">
           <button className="catalog__button" type="button">Show more</button>
         </div>
       </section>
-
       <Footer/>
     </div>
   </body>

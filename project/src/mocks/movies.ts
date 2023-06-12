@@ -1,0 +1,190 @@
+import MovieType from '../types/movie-type';
+
+const MOVIES: MovieType[] = [
+  {
+    name: 'Beach',
+    posterImage: 'https://10.react.pages.academy/static/film/poster/beach.jpg',
+    previewImage: 'https://10.react.pages.academy/static/film/preview/beach.jpg',
+    backgroundImage: 'https://10.react.pages.academy/static/film/background/beach.jpg',
+    backgroundColor: '#EBC996',
+    description: 'Vicenarian Richard travels to Thailand and finds himself in possession of a strange map. Rumours state that it leads to a solitary beach paradise, a tropical bliss. Excited and intrigued, he sets out to find it.',
+    rating: 3.3,
+    scoresCount: 207824,
+    director: 'Danny Boyle',
+    starring: [
+      'Leonardo DiCaprio',
+      'Daniel York',
+      'Patcharawan Patarakijjanon'
+    ],
+    runTime: 119,
+    genre: 'Adventure',
+    released: 2000,
+    id: 1,
+    isFavorite: false,
+    videoLink: 'https://10.react.pages.academy/static/film/video/bike.mp4',
+    previewVideoLink: 'https://10.react.pages.academy/static/film/video/traffic.mp4'
+  },
+  {
+    name: 'Fantastic Beasts: The Crimes of Grindelwald',
+    posterImage: 'https://10.react.pages.academy/static/film/poster/Fantastic_Beasts.jpg',
+    previewImage: 'https://10.react.pages.academy/static/film/preview/fantastic-beasts-the-crimes-of-grindelwald.jpg',
+    backgroundImage: 'https://10.react.pages.academy/static/film/background/Fantastic_Beasts.jpg',
+    backgroundColor: '#B6A99F',
+    description: 'In an effort to thwart Grindelwald\'s plans of raising pure-blood wizards to rule over all non-magical beings, Albus Dumbledore enlists his former student Newt Scamander, who agrees to help, though he\'s unaware of the dangers that lie ahead. Lines are drawn as love and loyalty are tested, even among the truest friends and family, in an increasingly divided wizarding world.',
+    rating: 3.4,
+    scoresCount: 160757,
+    director: 'David Yates',
+    starring: [
+      'Eddie Redmayne',
+      'Katherine Waterston',
+      'Dan Fogler'
+    ],
+    runTime: 134,
+    genre: 'Fantasy',
+    released: 2018,
+    id: 2,
+    isFavorite: false,
+    videoLink: 'https://10.react.pages.academy/static/film/video/matrix.mp4',
+    previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4'
+  },
+  {
+    name: 'Dardjeeling Limited',
+    posterImage: 'https://10.react.pages.academy/static/film/poster/Dardjeeling_Limited.jpg',
+    previewImage: 'https://10.react.pages.academy/static/film/preview/dardjeeling_limited.jpg',
+    backgroundImage: 'https://10.react.pages.academy/static/film/background/Dardjeeling_Limited.jpg',
+    backgroundColor: '#AD9F8B',
+    description: 'A year after their father\'s funeral, three brothers travel across India by train in an attempt to bond with each other.',
+    rating: 3.6,
+    scoresCount: 165106,
+    director: 'Wes Anderson',
+    starring: [
+      'Owen Wilson',
+      'Adrien Brody',
+      'Jason Schwartzman'
+    ],
+    runTime: 91,
+    genre: 'Adventure',
+    released: 200,
+    id: 3,
+    isFavorite: false,
+    videoLink: 'https://10.react.pages.academy/static/film/video/matrix.mp4',
+    previewVideoLink: 'https://10.react.pages.academy/static/film/video/traffic.mp4'
+  },
+  {
+    name: 'Aviator',
+    posterImage: 'https://10.react.pages.academy/static/film/poster/Aviator.jpg',
+    previewImage: 'https://10.react.pages.academy/static/film/preview/aviator.jpg',
+    backgroundImage: 'https://10.react.pages.academy/static/film/background/Aviator.jpg',
+    backgroundColor: '#D6CDAF',
+    description: 'A biopic depicting the early years of legendary Director and aviator Howard Hughes\' career from the late 1920s to the mid 1940s.',
+    rating: 9.8,
+    scoresCount: 307174,
+    director: 'Martin Scorsese',
+    starring: [
+      'Leonardo DiCaprio',
+      'Cate Blanchett',
+      'Kate Beckinsale'
+    ],
+    runTime: 170,
+    genre: 'Drama',
+    released: 2014,
+    id: 4,
+    isFavorite: false,
+    videoLink: 'https://10.react.pages.academy/static/film/video/bubbles.mp4',
+    previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4',
+  },
+  {
+    name: 'What We Do in the Shadows',
+    posterImage: 'https://10.react.pages.academy/static/film/poster/What-We-Do-in-the-Shadows.jpg',
+    previewImage: 'https://10.react.pages.academy/static/film/preview/what-we-do-in-the-shadows.jpg',
+    backgroundImage: 'https://10.react.pages.academy/static/film/background/What-We-Do-in-the-Shadows.jpg',
+    backgroundColor: '#A39E81',
+    description: 'A look into the daily (or rather, nightly) lives of three vampires who\'ve lived together for over 100 years, in Staten Island.',
+    rating: 7.2,
+    scoresCount: 6173,
+    director: 'Jemaine Clement',
+    starring: [
+      'Kayvan Novak',
+      'Matt Berry',
+      'Natasia Demetriou'
+    ],
+    runTime: 30,
+    genre: 'Comedy',
+    released: 2019,
+    id: 5,
+    isFavorite: false,
+    videoLink: 'https://10.react.pages.academy/static/film/video/bubbles.mp4',
+    previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4'
+  },
+  {
+    name: 'Macbeth',
+    posterImage: 'https://10.react.pages.academy/static/film/poster/Macbeth.jpg',
+    previewImage: 'https://10.react.pages.academy/static/film/preview/macbeth.jpg',
+    backgroundImage: 'https://10.react.pages.academy/static/film/background/Macbeth.jpg',
+    backgroundColor: '#F1E9CE',
+    description: 'Macbeth, the Thane of Glamis, receives a prophecy from a trio of witches that one day he will become King of Scotland. Consumed by ambition and spurred to action by his wife, Macbeth murders his king and takes the throne for himself.',
+    rating: 3.3,
+    scoresCount: 48798,
+    director: 'Justin Kurzel',
+    starring: [
+      'Michael Fassbender',
+      'Marion Cotillard',
+      'Jack Madigan'
+    ],
+    runTime: 113,
+    genre: 'Drama',
+    released: 2015,
+    id: 6,
+    isFavorite: false,
+    videoLink: 'https://10.react.pages.academy/static/film/video/bubbles.mp4',
+    previewVideoLink: 'https://10.react.pages.academy/static/film/video/traffic.mp4'
+  },
+  {
+    name: 'Johnny English',
+    posterImage: 'https://10.react.pages.academy/static/film/poster/Johnny_English.jpg',
+    previewImage: 'https://10.react.pages.academy/static/film/preview/johnny-english.jpg',
+    backgroundImage: 'https://10.react.pages.academy/static/film/background/Johnny_English.jpg',
+    backgroundColor: '#F0DBA2',
+    description: 'After a sudden attack on the MI5, Johnny English, Britain\'s most confident yet unintelligent spy, becomes Britain\'s only spy.',
+    rating: 10,
+    scoresCount: 136843,
+    director: 'Peter Howitt',
+    starring: [
+      'Rowan Atkinson',
+      'John Malkovich',
+      'Natalie Imbruglia'
+    ],
+    runTime: 88,
+    genre: 'Comedy',
+    released: 2003,
+    id: 7,
+    isFavorite: false,
+    videoLink: 'https://10.react.pages.academy/static/film/video/bike.mp4',
+    previewVideoLink: 'https://10.react.pages.academy/static/film/video/traffic.mp4'
+  },
+  {
+    name: 'No Country for Old Men',
+    posterImage: 'https://10.react.pages.academy/static/film/poster/No_Country_for_Old_Men.jpg',
+    previewImage: 'https://10.react.pages.academy/static/film/preview/no-country-for-old-men.jpg',
+    backgroundImage: 'https://10.react.pages.academy/static/film/background/No_Country_for_Old_Men.jpg',
+    backgroundColor: '#BDAD8F',
+    description: 'Violence and mayhem ensue after a hunter stumbles upon a drug deal gone wrong and more than two million dollars in cash near the Rio Grande.',
+    rating: 4.1,
+    scoresCount: 764976,
+    director: 'Ethan Coen',
+    starring: [
+      'Tommy Lee Jones',
+      'Javier Bardem',
+      'Josh Brolin'
+    ],
+    runTime: 122,
+    genre: 'Crime',
+    released: 2007,
+    id: 8,
+    isFavorite: false,
+    videoLink: 'https://10.react.pages.academy/static/film/video/bubbles.mp4',
+    previewVideoLink: 'https://10.react.pages.academy/static/film/video/dog.mp4'
+  },
+];
+
+export default MOVIES;
